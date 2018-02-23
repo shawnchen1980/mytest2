@@ -1,0 +1,53 @@
+{
+  "name": "mytest2",
+  "version": "1.0.0",
+  "main1": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.17.0",
+    "backbone": "^1.3.3",
+    "bundle-loader": "^0.5.5",
+    "draft-js": "^0.10.4",
+    "draft-js-export-html": "^1.2.0",
+    "express": "^4.16.2",
+    "jquery": "^3.2.1",
+    "multer": "^1.3.0",
+    "path": "^0.12.7",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "socket.io": "^2.0.4",
+    "socket.io-client": "^2.0.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "extract-loader": "^1.0.1",
+    "extract-text-webpack-plugin": "^3.0.1",
+    "file-loader": "^1.1.5",
+    "html-loader": "^0.5.1",
+    "html-webpack-plugin": "^2.30.1",
+    "nodemon": "^1.12.1",
+    "rimraf": "^2.6.2",
+    "style-loader": "^0.19.0",
+    "underscore-template-loader": "^0.8.0",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1"
+  },
+  "scripts": {
+    "server": "webpack-dev-server",
+    "webpack": "npm run clean && webpack",
+    "clean": "rimraf build",
+    "nodeserver": "nodemon ./server/server1/server.js",
+    "nodeserver2": "nodemon ./server/server2/server.js",
+    "nodeserver3": "nodemon ./server/server3/server.js"
+  }
+}

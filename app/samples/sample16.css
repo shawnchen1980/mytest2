@@ -1,0 +1,213 @@
+* {
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+.box0{
+	width:100px;
+	height:100px;
+	background:green;
+}
+.container1 {
+	width:200px;
+	height:200px;
+	background: red;
+	display:flex;
+	
+}
+.box1 {
+	align-self: center;
+	min-height: 100px;
+	background: green;
+	flex:0 0 100px;
+}
+.box2:after {
+	content: url(http://via.placeholder.com/100x100);
+	/*It's ok if you don't count it as one solution*/
+
+} 
+.container3 {
+	width:200px;
+	height:200px;
+	background: red;
+	position:relative;
+	
+}
+.box3 {
+	position:absolute;
+	top:50px;
+	bottom:50px;
+	left:50px;
+	right:50px;
+	background: green;
+}
+.container4 {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  grid-template-rows: 100px 100px;
+  width:200px;
+  background: red;
+ 
+}
+.box4 {
+	grid-row-start:1;
+	grid-column-start:2;
+	background: green;
+}
+.container5{
+	background: red;
+	float:left;
+	
+	display:block;
+	width:240px;
+	height:240px;
+	margin:20px;
+
+}
+.box5 {
+	background:green;
+	margin:20px;
+	width:240px;
+	height:240px;
+	float:left;
+	clear:both;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+  background: blue;
+  height:500px;
+}
+.griditem {
+	grid-column-start:3;
+	grid-row-start:4;
+	background: brown;
+}
+.action {
+ flex: 1 1 100%;
+ display: flex;
+ flex-wrap:wrap;
+ text-align: center; /* fallback */
+}
+.action input {
+ flex: 1 1 50%;
+}
+.action label {
+ align-self: center;
+ flex: 0 0 10%;
+}
+.action input, .action label {
+ margin-right: 10px;
+}
+.action button {
+	flex: 1 1 10%;
+}
+/*nav{
+	text-align:center;
+}
+ul {
+	background: red;
+	display:inline-block;
+	list-style:none;
+}
+ul li {
+	float:left;
+	width:100px;
+	margin:0 5px;
+	background: green;
+	border:1px black solid;
+	text-align:center;
+
+}
+ul li a{
+	text-decoration: none;
+
+}*/
+
+/*
+nav{
+	
+}
+ul {
+	background: red;
+	width:70%;
+	overflow:hidden;
+	margin:auto;
+	list-style:none;
+}
+ul li {
+	float:left;
+	width:18%;
+	margin:0 0.5%;
+	background: green;
+	border:1px black solid;
+	text-align:center;
+
+}
+ul li a{
+	text-decoration: none;
+	border:1px blue dotted;
+
+}
+ul li ul{
+	display:none;
+
+}
+ul li:hover ul{
+	display:block;
+	width:100%;
+	margin:0;
+}
+ul li:hover li{
+	display:block;
+	float:none;
+	width:100%;
+}
+*/
+
+/*
+nav{
+	
+}
+ul {
+	background: red;
+	width:70%;
+	display:flex;
+	margin:auto;
+	list-style:none;
+}
+ul li {
+	flex:1 1 19%;
+	width:19%;
+	margin:0 ;
+	background: green;
+	border:1px black solid;
+	text-align:center;
+	
+}
+ul li a{
+	text-decoration: none;
+	border:1px blue dotted;
+
+}
+ul li ul{
+	display:none;
+
+}
+ul li ul{
+
+	display:block;
+	position:absolute;
+
+	margin:0;
+}
+ul li li{
+
+	margin:0;
+}
+.col {
+	float:left;
+	background: blue;
+}
+*/

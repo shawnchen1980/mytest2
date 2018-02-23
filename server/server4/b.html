@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		html{
+			height:100%;
+		}
+		body {
+			height:100%;
+			background: green;
+		}
+		iframe {
+			width:80%;
+			height:80%;
+		}
+	</style>
+</head>
+<!--
+代码目标：演示跨域通信，设置跨域iframe高度
+使用方法：分别node server1.js和node server2.js，用浏览器访问localhost:3001
+参考文献：http://www.dyn-web.com/tutorials/iframes/postmessage/height/
+相关问答：
+问：如何才能获取一个iframe的引用并向他发送消息？
+答：两种做法：1 var ifr=window.frames[0]; ifr.postMessage(...) 2 var ifr=document.getElementById("ifr"); ifr.contentWindow.postMessage(...)
+
+问：设置跨域的iframe的属性时需要注意什么？
+答：必须严格使用例子代码中的setIframeHeightCO的做法，否则将导致访问出错
+-->
+<body>
+<iframe id="ifr" src="http://localhost:3000" style="height:100px">what the hell</iframe>
+<button id="but">get iframe height</button>
+<script type="text/javascript">
+	//var ifr=window.frames[0];
+	function setIframeHeightCO(id, ht) {
+    var ifrm = document.getElementById(id);
+    ifrm.style.visibility = 'hidden';
+    // some IE versions need a bit added or scrollbar appears
+    ifrm.style.height = ht + 14 + "px";
+    ifrm.style.visibility = 'visible';
+}
+	var ifr=document.getElementById("ifr");
+	var button=document.getElementById("but");
+	button.addEventListener("click",()=>{console.log(ifr);ifr.contentWindow.postMessage("height","http://localhost:3000");},false);
+	window.addEventListener("message",function(e){console.log(e.origin);console.log(e.data);setIframeHeightCO("ifr",parseInt(e.data));})
+</script>
+</body>
+</html>

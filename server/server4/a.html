@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body {
+			background: red;
+		}
+	</style>
+
+</head>
+<body>
+<button id="addContent">Add New Line</button>
+<button id="getHeight">Get Height Info</button>
+<div id="main"></div>
+<script type="text/javascript">
+	var content=document.getElementById("addContent");
+	var height=document.getElementById("getHeight");
+	var main=document.getElementById("main");
+	content.addEventListener("click",function(){
+		var e=document.createElement("p");
+		e.innerHTML="hello world!";
+		main.appendChild(e);
+	})
+	height.addEventListener("click",function(){
+		alert(document.body.clientHeight);
+	})
+	window.addEventListener("message",function(e){
+		parent.postMessage(document.body.clientHeight,"http://localhost:3001")
+	});
+</script>
+</body>
+</html>
