@@ -12,6 +12,7 @@ class ShowCase extends Component {
 	}
 	componentDidMount(){
 		var p=new Promise(resolve=>setTimeout(resolve,1000))
+		fetch(`http://localhost:3033`).then((res)=>{return res.text()}).then(console.log);
 		p.then(()=>{return axios.get(`http://localhost:3033`)}).then(res=>{this.setState({status:res.data.time})})
 	}
 	componentDidUpdate(){
